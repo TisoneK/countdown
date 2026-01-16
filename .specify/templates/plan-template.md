@@ -31,7 +31,15 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+### Required Compliance Gates
+
+- **Simplicity Above All**: Feature must not add configuration options, games, or explainer content
+- **Client-Side Only**: No server-side rendering, external APIs, or database dependencies  
+- **Minimal Aesthetic**: No heavy UI frameworks or complex animations
+- **Intentional Anticlimax**: Must preserve the core artistic statement of ending in nothingness
+- **Automatic Execution**: No user interaction required to start the countdown
+- **Technology Stack**: Must use Next.js App Router, React, TypeScript, minimal CSS only
+- **Scope Boundaries**: Must not become a configurable timer, tool, game, or reusable library
 
 ## Project Structure
 

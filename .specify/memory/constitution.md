@@ -1,50 +1,73 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: None (initial creation) → 1.0.0
+- Modified principles: None (initial creation)
+- Added sections: Core Principles (5), Technical Constraints, Development Workflow, Governance
+- Removed sections: None (initial creation)
+- Templates requiring updates: 
+  ✅ .specify/templates/plan-template.md (updated Constitution Check section)
+  ✅ .specify/templates/spec-template.md (no changes needed)
+  ✅ .specify/templates/tasks-template.md (no changes needed)
+- Follow-up TODOs: None
+-->
+
+# Countdown Timer Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity Above All
+The countdown timer MUST be a single-page web experience with minimal complexity. No configuration options, no games, no explainer content. The experience is intentionally focused on the countdown itself and its anticlimactic conclusion.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Client-Side Only
+All functionality MUST run client-side using Next.js App Router with React and TypeScript. No server-side rendering, no external APIs, no database dependencies. The countdown logic must be self-contained within the browser.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Minimal Aesthetic
+The visual presentation MUST use minimal CSS. No heavy frameworks, no complex animations, no decorative elements. The focus is on the countdown display, not visual flourish.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Intentional Anticlimax
+When the countdown reaches zero, the experience MUST end in intentional nothingness. No celebration, no restart prompt, no meaningful interaction. This is the core artistic statement of the project.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Automatic Execution
+The countdown MUST start automatically when the page loads. No user interaction required to begin. The timer should run continuously without pause or intervention until reaching zero.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technical Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Technology Stack
+- **Framework**: Next.js (App Router) - mandatory
+- **UI Library**: React - mandatory  
+- **Language**: TypeScript - mandatory
+- **Styling**: Minimal CSS only - no UI frameworks
+- **Rendering**: Client-side only - SSR disabled
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Scope Boundaries
+- **NOT building**: Configurable timer, tool, game, explainer, reusable component library
+- **NOT adding**: User controls, settings, restart functionality
+- **NOT implementing**: Persistent state, external dependencies, complex animations
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+
+### Implementation Requirements
+- Single page application structure
+- Countdown component with automatic start
+- Zero-state handling with intentional emptiness
+- TypeScript strict mode enabled
+- No external dependencies beyond Next.js/React
+
+### Quality Gates
+- Code must be self-contained and runnable
+- No external API calls or network requests
+- Countdown must reach zero reliably
+- End state must be intentionally empty
+- Performance must be smooth on modern browsers
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices. Amendments require:
+1. Documentation of proposed change
+2. Justification against core principles
+3. Impact assessment on the anticlimactic experience
+4. Explicit approval maintaining the project's artistic intent
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All development decisions must verify compliance with the five core principles. Complexity must be justified against the simplicity mandate. Use this constitution as the primary guidance for all technical choices.
+
+**Version**: 1.0.0 | **Ratified**: 2025-01-16 | **Last Amended**: 2025-01-16
